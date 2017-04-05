@@ -8,7 +8,7 @@ public class Main{
             Class.forName("com.mysql.jdbc.Driver");
             try(Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/NameOfDatabase", "insert - User", "insert - Password")){
                 Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT * FROM products"); \\ - write your query 
+                ResultSet rs = stmt.executeQuery("SELECT * FROM tableName"); \\ - write your query - tableName is table in NameOfDatabase - NameOfDatabase.tableName
                 int numOfColumns = rs.getMetaData().getColumnCount();
                 while (rs.next()){
                     for (int col = 1; col <= numOfColumns; col++){
