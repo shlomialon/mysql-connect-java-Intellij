@@ -6,7 +6,7 @@ public class Main{
     public static void main(String[] args){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            try(Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/northwind", "root", "shlomi2249")){
+            try(Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/northwind", "insert - User", "insert - Password")){
                 Statement stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT * FROM products");
                 int numOfColumns = rs.getMetaData().getColumnCount();
