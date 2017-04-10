@@ -25,6 +25,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        //------------Testing---------------
         String query = "SELECT * FROM products";
         getQuery(query,"northwind","root","shlomi2249");
     }
